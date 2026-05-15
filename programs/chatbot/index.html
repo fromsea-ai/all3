@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luxury Watch - Home</title>
+    <link rel="stylesheet" href="external.css">
+    <style>
+        body { background-color: #f2f2f2; font-family: Arial; }
+        .menu a { margin: 10px; color: blue; text-decoration: none; }
+        table { border-collapse: collapse; width: 60%; }
+        th, td { border: 2px solid black; padding: 10px; }
+        footer { margin: 20px; margin-top: 50px; }
+        
+        /* Chatbot Specific Styles */
+        #chat-container {
+            position: fixed; bottom: 20px; right: 20px; width: 300px; 
+            background: white; border: 2px solid darkred; border-radius: 10px; 
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2); display: none; 
+            flex-direction: column; overflow: hidden; z-index: 1000;
+        }
+        #chat-box { height: 250px; overflow-y: auto; padding: 10px; font-size: 14px; background: #fafafa; }
+        .chat-input-area { display: flex; border-top: 1px solid #ccc; }
+        #user-input { flex: 1; padding: 10px; border: none; outline: none; }
+        #send-btn { padding: 10px; background: darkred; color: white; border: none; cursor: pointer; }
+        #chat-toggle-btn {
+            position: fixed; bottom: 20px; right: 20px; padding: 12px 20px; 
+            background: darkred; color: white; border: none; border-radius: 50px; 
+            cursor: pointer; font-weight: bold; box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="description" content="Watch Website">
+</head>
+<body>
+
+<center>
+    <h1 style="color:darkred;">LUXURY WATCH</h1>
+    <h2>Premium Collections</h2>
+    <h3>Elegant | Durable | Stylish</h3>
+    <h4>Since 2026</h4>
+    
+    <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="features.html">Features</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <hr>
+    <img src="watch.webp" alt="Watch Image" width="300" height="200">
+
+    <p>
+        <b>Luxury Watch</b> is a <i>premium</i> brand.<br>
+        <u>Best quality guaranteed</u><br>
+        <strike>Old Price: ₹50000</strike><br>
+        New Price: <strong>₹39999</strong>
+    </p>
+
+    <font color="green" size="5">Limited Offer Available!</font>
+    <br><br>
+
+    <table>
+        <tr><th>Model</th><th>Price</th></tr>
+        <tr><td>Classic</td><td>₹24999</td></tr>
+        <tr><td>Sport</td><td>₹29999</td></tr>
+    </table>
+
+    <footer>© 2026 Luxury Watch. All rights reserved.</footer>
+</center>
+
+<div id="chat-container">
+    <div style="background: darkred; color: white; padding: 10px; font-weight: bold; display: flex; justify-content: space-between;">
+        Luxury Bot ⌚
+        <span style="cursor: pointer;" onclick="toggleChat()">✖</span>
+    </div>
+    <div id="chat-box">
+        <div><strong>Bot:</strong> Hello! Ask me about our prices or models.</div>
+    </div>
+    <div class="chat-input-area">
+        <input type="text" id="user-input" placeholder="Type here...">
+        <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<button id="chat-toggle-btn" onclick="toggleChat()">Chat with us</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
